@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<img src="./images/Logo.png" height="80px"/>
+	</div>
+	<div class="content">
+		<div class="menu">
+			<h3>Contas</h3>
+			<div class="cliente">
+				<p>Cliente: </p>
+				<p th:text="${cliente.nome}" scope="row"></p>
+			</div>
+			<a class="btn btn-primary" role="button" href="conta/nova">Nova Conta</a>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Titular</th>
+						<th scope="col">Agência</th>
+						<th scope="col">Conta</th>
+						<th scope="col">Saldo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="conta : ${contas}">
+						<th th:text="${conta.id}" scope="row"></th>
+						<td th:text="${conta.titular}"></td>
+						<td th:text="${conta.agencia}"></td>
+						<td th:text="${conta.numero}"></td>
+						<td th:text="${conta.saldo}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

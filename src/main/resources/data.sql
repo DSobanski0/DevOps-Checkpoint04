@@ -1,0 +1,1 @@
+insert into Cliente(id, nome, cpf) values (SQ_CLIENTE.nextval, 'Daniel de Oliveira', 03423334412);

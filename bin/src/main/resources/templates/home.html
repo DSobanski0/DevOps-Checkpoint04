@@ -28,7 +28,6 @@
 						<th scope="col">Agência</th>
 						<th scope="col">Conta</th>
 						<th scope="col">Saldo</th>
-						<th scope="col">Ações</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,10 +37,6 @@
 						<td th:text="${conta.agencia}"></td>
 						<td th:text="${conta.numero}"></td>
 						<td th:text="${conta.saldo}"></td>
-						<td class="actions">
-	                        <a class="btn btn-warning btn-xs" th:href="@{/conta/edit/{id}(id=${conta.id})}">Editar</a>
-	                        <a class="btn btn-danger btn-xs" th:href="@{/conta/delete/{id}(id=${conta.id})}">Excluir</a>
-                    	</td>
 					</tr>
 				</tbody>
 			</table>

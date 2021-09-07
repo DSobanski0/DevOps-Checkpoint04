@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nova Conta</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<img src="../images/Logo.png" height="80px"/>
+	</div>
+	<div class="content">
+		<div class="menu">
+			<h3>Nova Conta</h3>
+		</div>
+
+		<form class="row g-3" action="/conta" method="post" th:object="${conta}">
+			<div class="mb-3">
+				<label for="titular" class="form-label">Titular</label>
+				<input type="text" class="form-control" id="titular" name="titular" th:field="*{titular}">
+				<span th:errors="*{titular}"></span>
+			</div>
+			<div class="mb-3 col-md-6">
+				<label for="agencia" class="form-label">Agência</label>
+				<input type="text" class="form-control" id="agencia" name="agencia" th:field="*{agencia}">
+				<span th:errors="*{agencia}"></span>
+			</div>
+			<div class="mb-3 col-md-6">
+				<label for="numero" class="form-label">Número da conta</label>
+				<input type="text" class="form-control" id="numero" name="numero" th:field="*{numero}">
+				<span th:errors="*{numero}"></span>
+			</div>
+			<div class="col-12">
+				<button class="btn btn-success">Salvar</button>
+				<a href="/conta" class="btn btn-danger">Cancelar</a>
+			</div>
+		</form>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>

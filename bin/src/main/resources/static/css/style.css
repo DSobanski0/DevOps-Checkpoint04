@@ -1,0 +1,19 @@
+.header{
+	display: flex;
+	justify-content: center;
+}
+
+.content{
+	margin: 30px;
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+}
+
+.cliente{
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+}
